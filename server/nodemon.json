@@ -1,6 +1,7 @@
 {
   "env": {
     "MONGO_USER": "partha",
-    "MONGO_PASSWORD": "finji6CMzeIpxzFH"
+    "MONGO_PASSWORD": "finji6CMzeIpxzFH",
+    "MONGO_DB": "searchDatabase"
   }
 }

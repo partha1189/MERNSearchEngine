@@ -13,7 +13,7 @@ app.use(cors());
 app.use(json());
 app.use(searchRoutes);
 
-const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.o038r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.o038r.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
 console.log(uri);
 
 // const options = { newUrlParser: true, useUnifiedTopology: true };
