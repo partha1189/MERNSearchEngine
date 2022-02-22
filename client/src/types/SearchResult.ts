@@ -8,3 +8,6 @@ export interface ISearchResult {
   updatedAt: string;
   __v: number;
 }
+export type SearchResultProps = {
+  searchResult: ISearchResult;
+};

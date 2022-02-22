@@ -18,6 +18,19 @@ const getSearchResults = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
+const getSearchResult = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const {
+      params: { id },
+    } = req;
+    const searchResult = await SearchResult.findById(id);
+
+    res.status(200).json(searchResult);
+  } catch (error) {
+    throw error;
+  }
+};
+
 const addSearchItem = async (req: Request, res: Response): Promise<void> => {
   try {
     const body = req.body as ISearchResult;
@@ -38,4 +51,4 @@ const addSearchItem = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-export { getSearchResults, addSearchItem };
+export { getSearchResults, addSearchItem, getSearchResult };
